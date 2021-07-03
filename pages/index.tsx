@@ -2,8 +2,31 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Row, Col, Form, Button, Pagination } from 'react-bootstrap'
 import { Menu, BarChart2, Calendar, User, ShoppingBag, Trello, UploadCloud, Plus } from 'react-feather';
+import Select from 'react-select';
+import { useForm, SubmitHandler, Controller } from "react-hook-form";
+
+
+type Inputs = {
+    productTitle: string
+}
 
 export default function Home() {
+
+  const {register, control, handleSubmit} = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    const dataForm = {
+      productTitle: data.productTitle,
+      category: data.categoria.value
+    }
+    console.log(dataForm);
+  }
+
+
+  const options = [
+    { value: 'alimentacao', label: 'Alimentação' },
+    { value: 'bebidas', label: 'Bebidas' }
+  ]
+
   return (
     <div className={"container-app"}>
       <Head>
@@ -52,25 +75,49 @@ export default function Home() {
                 </Col>
 
                 <Col sm={8} md={5} className="">
-                  <Form className="row text-right">
+                  <Form className="row text-right" onSubmit={handleSubmit(onSubmit)}>
                     <Form.Group as={Col} sm={4} md={5} className="">
-                      <Form.Control type="text" placeholder="Burscar por nome do produto" className="block" />
+                      <Form.Control type="text" placeholder="Burscar por nome do produto" className="block" {...register("productTitle", { required: true } )} />
                     </Form.Group>
 
-                    <Form.Group as={Col} sm={4} md={5} className="">
-                      <Form.Control as="select" size="md">
-                        <option>Large select</option>
-                        <option>Large select</option>
-                        <option>Large select</option>
-                        <option>Large select</option>
-                      </Form.Control>
+                    <Col sm={8} md={5} className="form-group">
+
+                    <Controller
+                      name="categoria"
+                      isClearable
+                      control={control}
+                      isMulti
+                      render={({ field }) => (
+                        <Select
+                          {...field}
+                          options={options}
+                        />
+                      )}
+                    />
+                      {/* <Select options={options} className="" /> 
+                      <Controller
+                        as={Select}
+                        name="Name"
+                        options={options}
+                        isMulti
+                      />*/}
+                    </Col>
+
+                    <Form.Group as={Col} sm={1} className="">
+                      <Button type="submit">
+                        Submit
+                      </Button>
                     </Form.Group>
+
+                    {/* <Col sm={8} md={5} className="form-group">
+                      <Select options={options} className="" />
+                    </Col>
 
                     <Form.Group as={Col} sm={2} md={2} className="">
                       <Button className="btn btn-purple" block>
                         <UploadCloud />
                       </Button>
-                    </Form.Group>
+                    </Form.Group> */}
                   </Form>
                 </Col>
               </Row>
@@ -79,16 +126,18 @@ export default function Home() {
             <Col sm={12}>
               <table className={"table-vera"}>
               <thead>
-                <th className="text-center">
-                  <input type="checkbox" />
-                </th>
-                <th>Código</th>
-                <th>Produto</th>
-                <th>Estoque</th>
-                <th>Preço</th>
-                <th>Múltiplo</th>
-                <th>Unidade</th>
-                <th>Comissão</th>
+                <tr>
+                  <th className="text-center">
+                    <input type="checkbox" />
+                  </th>
+                  <th>Código</th>
+                  <th>Produto</th>
+                  <th>Estoque</th>
+                  <th>Preço</th>
+                  <th>Múltiplo</th>
+                  <th>Unidade</th>
+                  <th>Comissão</th>
+                </tr>
               </thead>
               <tbody>
                 <tr>
