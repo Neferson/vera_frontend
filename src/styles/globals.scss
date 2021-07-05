@@ -1,15 +1,15 @@
+@import "vars";
 
-@import 'vars';
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400&display=swap');
 
 @import "~bootstrap/scss/bootstrap";
 
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
-  font-family: Roboto ,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -22,15 +22,19 @@ a {
   font-size: 15px;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   padding: 0;
   margin: 0;
   color: $main-title-color;
-  font-family: Poppins, Roboto ,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Poppins, Roboto, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
 }
 
-h1{
+h1 {
   font-size: $main-title-size;
 
   svg {
@@ -39,7 +43,7 @@ h1{
   }
 }
 
-.logo-container{
+.logo-container {
   margin-left: 36px;
 }
 
@@ -56,8 +60,8 @@ h1{
 }
 
 .btn-purple {
-  background: #805AD5;
-  border: 1px solid #805AD5;
+  background: #805ad5;
+  border: 1px solid #805ad5;
 
   &:hover {
     background: #6949af;
@@ -68,27 +72,27 @@ h1{
 .pagination {
   .page-item {
     margin: 0 5px;
-    
-    .page-link{
+
+    .page-link {
       color: #fff;
       border-radius: 8px;
       background-color: $main-icon-color;
       border-color: $main-icon-color;
 
-      &:hover{
+      &:hover {
         filter: brightness(1.1);
       }
     }
   }
 
   .active {
-    .page-link{
+    .page-link {
       background-color: $main-color;
       border-color: $main-color;
       color: #fff;
       border-radius: 8px;
     }
-  }  
+  }
 }
 
 .bg-main {
@@ -96,7 +100,7 @@ h1{
 }
 
 .btn-rounded {
-  border-radius: 50%;;
+  border-radius: 50%;
 }
 
 .btn-main {
@@ -122,12 +126,12 @@ h1{
   bottom: 40px;
 }
 
-.table-vera{
+.table-vera {
   width: 100%;
   border: 0;
   border-spacing: 0;
 
-  th{
+  th {
     font-family: Poppins, Roboto;
     text-align: left;
     padding: 14px;
@@ -137,11 +141,9 @@ h1{
     color: $main-icon-color;
   }
 
-  tbody{
+  tbody {
     tr {
-
       background: $main-container-bgcolor;
-      
 
       &:nth-child(odd) {
         background: #fff;
@@ -151,16 +153,15 @@ h1{
         background: rgba(76, 122, 98, 0.1);
       }
 
-      td{
+      td {
         text-align: left;
         font-weight: normal;
         padding: 8px 3px;
         font-size: 14px;
         color: $main-font-color;
       }
-
     }
   }
 }
 
-@import 'Home.module.scss';
+@import "Home.module.scss";
