@@ -105,7 +105,7 @@ export default function Home() {
 
                     <Form.Group as={Col} sm={1} className="">
                       <Button type="submit">
-                        Submit
+                        Filtrar
                       </Button>
                     </Form.Group>
 
