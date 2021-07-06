@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Row, Col, Form, Button, Pagination } from 'react-bootstrap'
-import { Menu, BarChart2, Calendar, User, ShoppingBag, Trello, UploadCloud, Plus } from 'react-feather';
+import { BarChart2, Calendar, User, ShoppingBag, Trello, UploadCloud, Plus } from 'react-feather';
 import Select from 'react-select';
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
+import Header from './components/Header';
 
 
 type Inputs = {
@@ -32,19 +33,8 @@ export default function Home() {
 
   return (
     <div className={"container-app"}>
-      <header className={"header"}>
-        <div className="menu-button-container">
-          <button className={"openMenu"}>
-            <Menu />
-          </button>
-        </div>
-
-        <div className={"logo-container"}>
-          <Image width={80} height={45} src={"/vera-corp.png"} alt="Logo Vera Corp" />
-        </div>
-      </header>
-
-      
+    
+      <Header />      
 
       <main className={"main"}>
 
