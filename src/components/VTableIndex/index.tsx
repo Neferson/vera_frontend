@@ -1,7 +1,22 @@
 import { Pagination } from 'react-bootstrap';
 import styles from "./styles.module.scss";
 
-export function VTableIndex(){
+type Product = {
+	code: string;
+	name: string;
+	stock: number;
+	amount: number;
+	multiple: number;
+	unit: string;
+	seller_amount: string;
+}
+
+type VTableIndexProps = {
+	THeader: Array<String>;
+	TBody: Array<Product>;
+}
+
+export function VTableIndex({ THeader, TBody }: VTableIndexProps){
 	return (
 		<>
 			<table className={`${styles['table-vera']}`}>
@@ -10,52 +25,30 @@ export function VTableIndex(){
 						<th className="text-center">
 							<input type="checkbox" />
 						</th>
-						<th>Código</th>
-						<th>Produto</th>
-						<th>Estoque</th>
-						<th>Preço</th>
-						<th>Múltiplo</th>
-						<th>Unidade</th>
-						<th>Comissão</th>
+						{ THeader.map((title, index) => {
+							return (
+								<th key={index}>{title}</th>
+							)
+						})}
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td className="text-center">
-							<input type="checkbox" />
-						</td>
-						<td>42563</td>
-						<td>Saco de Arroz 5kg Tipo A</td>
-						<td>153</td>
-						<td>15,00</td>
-						<td>1</td>
-						<td>KG</td>
-						<td>5%</td>
-					</tr>
-					<tr>
-						<td className="text-center">
-							<input type="checkbox" />
-						</td>
-						<td>42563</td>
-						<td>Saco de Arroz 5kg Tipo A</td>
-						<td>153</td>
-						<td>15,00</td>
-						<td>1</td>
-						<td>KG</td>
-						<td>5%</td>
-					</tr>
-					<tr>
-						<td className="text-center">
-							<input type="checkbox" />
-						</td>
-						<td>42563</td>
-						<td>Saco de Arroz 5kg Tipo A</td>
-						<td>153</td>
-						<td>15,00</td>
-						<td>1</td>
-						<td>KG</td>
-						<td>5%</td>
-					</tr>
+					{ TBody.map(product => {
+						return (
+							<tr key={product.code}>
+								<td className="text-center">
+									<input type="checkbox" />
+								</td>
+								<td>{product.code}</td>
+								<td>{product.name}</td>
+								<td>{product.stock}</td>
+								<td>{product.amount}</td>
+								<td>{product.multiple}</td>
+								<td>{product.unit}</td>
+								<td>{product.seller_amount}</td>
+							</tr>
+						)
+					}) }
 				</tbody>
 			</table>
 
