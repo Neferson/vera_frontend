@@ -4,7 +4,7 @@ import { Row, Col, Form, Button, Pagination } from 'react-bootstrap'
 import { BarChart2, Calendar, User, ShoppingBag, Trello, UploadCloud, Plus } from 'react-feather';
 import Select from 'react-select';
 import { useForm, SubmitHandler, Controller } from "react-hook-form";
-import Header from './components/Header';
+import Header from '../components/Header';
 
 
 type Inputs = {

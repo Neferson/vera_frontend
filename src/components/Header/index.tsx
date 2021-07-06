@@ -1,6 +1,6 @@
 import { Bell, Menu } from 'react-feather';
 import Image from 'next/image';
-import { Button } from 'react-bootstrap';
+import { Button, Row, Col } from 'react-bootstrap';
 
 export default function Header () {
   return (
@@ -15,12 +15,12 @@ export default function Header () {
         <Image width={80} height={45} src={"/vera-corp.png"} alt="Logo Vera Corp" />
       </div>
 
-      <div className="justify-content-end">
-        <Button className={"btn-rounded"}>
+      <div className="header-nav-container">        
+        <Button className={"btn-rounded btn-header-nav"}>
           <Bell />
         </Button>
 
-        <Button>
+        <Button className={"btn-rounded btn-header-nav"}>
           NF
         </Button>
       </div>

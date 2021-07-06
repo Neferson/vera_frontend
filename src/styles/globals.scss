@@ -91,6 +91,36 @@ h1 {
   }
 }
 
+.header-nav-container{
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 2px;
+
+  .btn-header-nav {
+    margin: 0 3px; 
+    cursor: pointer;
+    border: 0;
+    width: var(--menu-icon-width);
+    height: var(--menu-icon-width);
+    text-align: center;
+    display: flex;
+    border-radius: 3rem;
+    justify-content: center;
+    background-color: var(--main-icon-bgcolor);
+    color: var(--main-icon-color);
+    align-items: center;
+    transition: all 0.8s;
+
+    &:hover {
+      background-color: green;
+      color: #fff;
+    }
+  }
+}
+
 .pagination {
   .page-item {
     margin: 0 5px;
