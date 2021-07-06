@@ -1,5 +1,3 @@
-
-
 .container-app {
   min-height: 100vh;
   padding: 0;
@@ -9,13 +7,13 @@
   flex-direction: column;
 
   align-items: center;
-  height: 100vh;  
+  height: 100vh;
   background-color: #f4f4f4;
 
   .header {
     margin: 0;
     width: 100%;
-    padding: 2.0rem 0.4rem;
+    padding: 2rem 0.4rem;
     height: 30px;
     border-top: 1px solid #eaeaea;
     display: flex;
@@ -25,26 +23,26 @@
     border-bottom: solid 1px #eee;
 
     .menu-button-container {
-      width: $menu-container-width;
+      width: var(--menu-container-width);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-  
+
       button.openMenu {
         cursor: pointer;
         border: 0;
-        width: $menu-icon-width;
-        height: $menu-icon-width;
+        width: var(--menu-icon-width);
+        height: var(--menu-icon-width);
         text-align: center;
         display: flex;
         border-radius: 3rem;
         justify-content: center;
-        background-color: $main-icon-bgcolor;
-        color: $main-icon-color;
+        background-color: var(--main-icon-bgcolor);
+        color: var(--main-icon-color);
         align-items: center;
         transition: all 0.8s;
-    
+
         &:hover {
           background-color: green;
           color: #fff;
@@ -55,56 +53,56 @@
 
   .main {
     width: 100%;
-    background-color: $main-icon-bgcolor;
+    background-color: var(--main-icon-bgcolor);
     display: flex;
     flex-direction: row;
     height: 100vh;
 
     .main-nav {
       padding: 0.1rem 0.35rem;
-      min-width: $menu-container-width;
+      min-width: var(--menu-container-width);
       flex-direction: column;
       justify-content: center;
       align-items: center;
       background-color: #fff;
 
-      ul{
+      ul {
         margin: 0;
-        padding: 0;        
+        padding: 0;
         flex-grow: 1;
 
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        
+
         justify-content: center;
         align-items: center;
-        
-        li{
+
+        li {
           padding: 0;
           margin: 10px 5px;
-          color: $main-icon-color;
+          color: var(--main-icon-color);
 
           display: flex;
           justify-content: center;
           align-items: center;
-          cursor: pointer;          
-          
+          cursor: pointer;
+
           border-radius: 50%;
           list-style: none;
-          width: $menu-icon-width;
-          height: $menu-icon-width;
+          width: var(--menu-icon-width);
+          height: var(--menu-icon-width);
 
           transition: all 0.4s;
 
           &:last-child {
-            background-color: $main-color;
+            background-color: var(--main-color);
             color: #fff;
           }
 
-          &:hover{
-            background-color: $main-icon-bgcolor;
-            color: $main-icon-color;
+          &:hover {
+            background-color: var(--main-icon-bgcolor);
+            color: var(--main-icon-color);
           }
         }
       }
@@ -112,10 +110,9 @@
 
     .main-container {
       flex-grow: 1;
-      background: $main-container-bgcolor;
+      background: var(--main-container-bgcolor);
       padding: 1rem 1.8rem;
     }
-
   }
 
   .footer {
@@ -125,18 +122,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $main-icon-bgcolor;
+    background-color: var(--main-icon-bgcolor);
   }
-  
+
   .footer a {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
   }
-  
 }
-
 
 @media (max-width: 600px) {
 }
