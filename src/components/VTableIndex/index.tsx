@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 export function VTableIndex(){
 	return (
 		<>
-			<table className={styles.tableVera}>
+			<table className={`${styles['table-vera']}`}>
 				<thead>
 					<tr>
 						<th className="text-center">
