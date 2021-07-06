@@ -1,0 +1,37 @@
+.tableVera {
+  width: 100%;
+  border: 0;
+  border-spacing: 0;
+
+  th {
+    font-family: Poppins, Roboto;
+    text-align: left;
+    padding: 14px;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 3px;
+    color: var(--main-icon-color);
+  }
+
+  tbody {
+    tr {
+      background: var(--main-container-bgcolor);
+
+      &:nth-child(odd) {
+        background: #fff;
+      }
+
+      &:hover {
+        background: rgba(76, 122, 98, 0.1);
+      }
+
+      td {
+        text-align: left;
+        font-weight: normal;
+        padding: 8px 3px;
+        font-size: 14px;
+        color: var(--main-font-color);
+      }
+    }
+  }
+}
