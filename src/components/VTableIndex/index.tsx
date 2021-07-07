@@ -1,4 +1,6 @@
+import { ReactNode } from 'react';
 import { Pagination } from 'react-bootstrap';
+
 import styles from "./styles.module.scss";
 
 type Product = {
@@ -13,10 +15,10 @@ type Product = {
 
 type VTableIndexProps = {
 	THeader: Array<String>;
-	TBody: Array<Product>;
+	children: ReactNode;
 }
 
-export function VTableIndex({ THeader, TBody }: VTableIndexProps){
+export function VTableIndex({ THeader, children }: VTableIndexProps){
 	return (
 		<>
 			<table className={`${styles['table-vera']}`}>
@@ -33,22 +35,7 @@ export function VTableIndex({ THeader, TBody }: VTableIndexProps){
 					</tr>
 				</thead>
 				<tbody>
-					{ TBody.map(product => {
-						return (
-							<tr key={product.code}>
-								<td className="text-center">
-									<input type="checkbox" />
-								</td>
-								<td>{product.code}</td>
-								<td>{product.name}</td>
-								<td>{product.stock}</td>
-								<td>{product.amount}</td>
-								<td>{product.multiple}</td>
-								<td>{product.unit}</td>
-								<td>{product.seller_amount}</td>
-							</tr>
-						)
-					}) }
+					{ children }
 				</tbody>
 			</table>
 

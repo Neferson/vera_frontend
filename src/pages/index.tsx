@@ -86,7 +86,7 @@ export default function Home() {
                       isMulti
                       render={({ field }) => (
                         <Select
-                          id="Teste"
+                          id="category_id"
                           {...field}
                           options={options}
                         />
@@ -124,11 +124,6 @@ export default function Home() {
             
 
           </Row>
-
-          <Button className="btn-main btn-floating btn-rounded">
-            <Plus />
-          </Button>
-
         </div>
         
       </main>
