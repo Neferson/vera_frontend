@@ -1,0 +1,93 @@
+
+
+.logo-container {
+  margin-left: 36px;
+}
+
+.header {
+  margin: 0;
+  width: 100%;
+  padding: 2rem 0.4rem;
+  height: 30px;
+  border-top: 1px solid #eaeaea;
+  display: flex;
+
+  align-items: center;
+  background-color: #fff;
+  border-bottom: solid 1px #eee;
+
+  .menu-button-container {
+    width: var(--menu-container-width);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    button.openMenu {
+      cursor: pointer;
+      border: 0;
+      width: var(--menu-icon-width);
+      height: var(--menu-icon-width);
+      text-align: center;
+      display: flex;
+      border-radius: 3rem;
+      justify-content: center;
+      background-color: var(--main-icon-bgcolor);
+      color: var(--main-icon-color);
+      align-items: center;
+      transition: all 0.8s;
+
+      &:hover {
+        background-color: green;
+        color: #fff;
+      }
+    }
+  }
+
+  .header-nav-container {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 2px;
+    position: relative;
+
+    .btn-header-nav {
+      margin: 0 5px; 
+      cursor: pointer;
+      border: 0;
+      width: var(--menu-icon-width);
+      height: var(--menu-icon-width);
+      text-align: center;
+      display: flex;
+      border-radius: 3rem;
+      justify-content: center;
+      background-color: var(--main-icon-bgcolor);
+      color: var(--main-icon-color);
+      align-items: center;
+      transition: all 0.8s;
+
+      &:hover {
+        background-color: green;
+        color: #fff;
+      }
+    }
+
+    .vera-badge {
+      position: absolute;
+      font-size: 12px;
+      top: -3px;
+      margin-left: 20px;
+      padding: 10px;
+      background-color: #f05;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+  }
+}

@@ -65,10 +65,6 @@ h1 {
   }
 }
 
-.logo-container {
-  margin-left: 36px;
-}
-
 .text-left {
   text-align: left !important;
 }
@@ -88,36 +84,6 @@ h1 {
   &:hover {
     background: #6949af;
     border: 1px solid #6949af;
-  }
-}
-
-.header-nav-container{
-  width: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0 2px;
-
-  .btn-header-nav {
-    margin: 0 3px; 
-    cursor: pointer;
-    border: 0;
-    width: var(--menu-icon-width);
-    height: var(--menu-icon-width);
-    text-align: center;
-    display: flex;
-    border-radius: 3rem;
-    justify-content: center;
-    background-color: var(--main-icon-bgcolor);
-    color: var(--main-icon-color);
-    align-items: center;
-    transition: all 0.8s;
-
-    &:hover {
-      background-color: green;
-      color: #fff;
-    }
   }
 }
 

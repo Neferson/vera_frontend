@@ -10,47 +10,6 @@
   height: 100vh;
   background-color: #f4f4f4;
 
-  .header {
-    margin: 0;
-    width: 100%;
-    padding: 2rem 0.4rem;
-    height: 30px;
-    border-top: 1px solid #eaeaea;
-    display: flex;
-
-    align-items: center;
-    background-color: #fff;
-    border-bottom: solid 1px #eee;
-
-    .menu-button-container {
-      width: var(--menu-container-width);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      button.openMenu {
-        cursor: pointer;
-        border: 0;
-        width: var(--menu-icon-width);
-        height: var(--menu-icon-width);
-        text-align: center;
-        display: flex;
-        border-radius: 3rem;
-        justify-content: center;
-        background-color: var(--main-icon-bgcolor);
-        color: var(--main-icon-color);
-        align-items: center;
-        transition: all 0.8s;
-
-        &:hover {
-          background-color: green;
-          color: #fff;
-        }
-      }
-    }
-  }
-
   .main {
     width: 100%;
     background-color: var(--main-icon-bgcolor);
