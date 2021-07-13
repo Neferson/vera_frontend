@@ -3,7 +3,7 @@ import { Plus } from 'react-feather';
 
 import styles from "./styles.module.scss";
 
-export function BSButtonAdd() {
+export function VButtonAdd() {
   return (
     <Button 
 			className={`

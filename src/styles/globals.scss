@@ -146,4 +146,22 @@ h1 {
   bottom: 40px;
 }
 
+.display-none {
+  display: none;
+}
+
+.table-actions {
+  position: absolute;
+  width: 300px;
+  margin-left: 90%;
+  top: 7.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.position-relative {
+  position: relative;
+}
 @import "Home.module.scss";

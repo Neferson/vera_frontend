@@ -4,7 +4,7 @@
   border-spacing: 0;
 
   th {
-    font-family: Poppins, Roboto;
+    font-family: Poppins, Roboto, sans-serif;
     text-align: left;
     padding: 14px;
     font-weight: 600;
@@ -16,13 +16,30 @@
   tbody {
     tr {
       background: var(--main-container-bgcolor);
+      height: 50px;
 
       &:nth-child(odd) {
         background: #fff;
       }
 
+      .table-actions {
+        position: absolute;
+        width: 300px;
+        margin-left: 90%;
+        top: 7.5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+      }
+
       &:hover {
         background: rgba(76, 122, 98, 0.1);
+
+        .table-actions {
+          background: red;
+          display: none !important;
+        }
       }
 
       td {
@@ -31,6 +48,10 @@
         padding: 8px 3px;
         font-size: 14px;
         color: var(--main-font-color);
+
+        button {
+          margin-right: 10px;
+        }
       }
     }
   }
