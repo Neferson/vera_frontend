@@ -67,14 +67,9 @@ export default function ProductsList(){
 			<VTableIndex THeader={THeader}>
 				{ TBody.map((product) => {
 						return (
-							<>
 							<tr key={product.code}>
-								<td className="text-center position-relative">
+								<td className="text-center">
 									<input type="checkbox" onClick={() => handleCheckboxProducts(product.code)}/>
-									<div className="table-actions">
-										<VButtonEdit type="button" />
-										<VButtonDelete type="button" />
-									</div>
 								</td>
 								<td>{product.code}</td>
 								<td>{product.name}</td>
@@ -82,9 +77,14 @@ export default function ProductsList(){
 								<td>{product.amount}</td>
 								<td>{product.multiple}</td>
 								<td>{product.unit}</td>
-								<td>{product.seller_amount}</td>
+								<td className="position-relative">
+									{product.seller_amount}
+									<div className="table-actions">
+										<VButtonEdit type="button" />
+										<VButtonDelete type="button" />
+									</div>
+								</td>
 							</tr>
-						</>
 						)
 					}) }
 			</VTableIndex>

@@ -8,6 +8,6 @@ type VButtonEditProps = ButtonHTMLAttributes<HTMLButtonElement>;
 
 export function VButtonEdit({ ...ButtonProps }: VButtonEditProps){
 	return (
-		<Button {...ButtonProps} variant="warning" className={`${styles['td-button']}`}><Edit2 color="white" /></Button>
+		<Button {...ButtonProps} variant="outline-warning" className={`${styles['td-button']} ${styles["outline-warning"]}`}><Edit2 /></Button>
 	)
 }
